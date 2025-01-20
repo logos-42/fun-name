@@ -12,9 +12,12 @@ const loadingIndicator = document.getElementById('loadingIndicator');
 const errorMessage = document.getElementById('errorMessage');
 const errorText = document.getElementById('errorText');
 const tryAgainBtn = document.getElementById('tryAgainBtn');
+const sidebar = document.getElementById('paymentSidebar');
+const donateBtn = document.getElementById('donateBtn');
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
+    // Name generation events
     generateBtn.addEventListener('click', generateNames);
     tryAgainBtn.addEventListener('click', generateNames);
     englishNameInput.addEventListener('keypress', (e) => {
@@ -22,7 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
             generateNames();
         }
     });
+
+    // Sidebar events
+    donateBtn.addEventListener('click', toggleSidebar);
+    document.addEventListener('click', closeSidebarOnClickOutside);
 });
+
+// Sidebar Functions
+function toggleSidebar(e) {
+    e.stopPropagation();
+    sidebar.classList.toggle('active');
+}
+
+function closeSidebarOnClickOutside(e) {
+    if (!sidebar.contains(e.target) && !donateBtn.contains(e.target)) {
+        sidebar.classList.remove('active');
+    }
+}
 
 // Main Function
 async function generateNames() {

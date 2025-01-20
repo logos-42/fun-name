@@ -293,6 +293,102 @@ button:hover {
     font-size: 1.1em;
 }
 
+/* 支付侧边栏样式 */
+.payment-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+.payment-sidebar.active {
+    right: 0;
+}
+
+.donate-btn {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.donate-btn:hover {
+    background: var(--primary-dark);
+}
+
+.donate-btn i {
+    transform: rotate(90deg);
+}
+
+.payment-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.payment-content h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.payment-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.payment-image-container {
+    flex: 1;
+    max-width: 150px;
+}
+
+.payment-image-container img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.payment-image-container p {
+    margin: 0;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .payment-sidebar {
+        width: 280px;
+        right: -280px;
+    }
+    
+    .donate-btn {
+        left: -42px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .payment-images {
+        padding: 0 10px;
+    }
+    
+    .payment-image-container img {
+        max-width: 120px;
+    }
+}
+
 /* Loading and Error States */
 .loading {
     text-align: center;

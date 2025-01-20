@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <!-- 灯笼主体 -->
+    <path d="M16 4 L24 10 L24 22 L8 22 L8 10 Z" fill="#e74c3c" stroke="#c0392b" stroke-width="1.5"/>
+    <!-- 灯笼顶部 -->
+    <path d="M14 2 L18 2 L18 4 L14 4 Z" fill="#c0392b"/>
+    <!-- 灯笼底部装饰 -->
+    <path d="M10 24 L14 24 L14 26 L10 26 Z" fill="#c0392b"/>
+    <path d="M18 24 L22 24 L22 26 L18 26 Z" fill="#c0392b"/>
+    <!-- 灯笼中间的"福"字简化 -->
+    <path d="M13 12 L19 12 M16 10 L16 16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+</svg>

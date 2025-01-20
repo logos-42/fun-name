@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fu Name - Funny Chinese Name Generator</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 直接在HTML中添加关键样式，确保它们被加载 */
+        .test-button {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            z-index: 9999;
+        }
+        
+        #sidebar {
+            position: fixed;
+            right: -300px;
+            top: 0;
+            width: 300px;
+            height: 100%;
+            background: white;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            transition: right 0.3s;
+            z-index: 9998;
+        }
+        
+        #sidebar.active {
+            right: 0;
+        }
+    </style>
 </head>
 <body>
+    <!-- 测试按钮和侧边栏 -->
+    <button class="test-button" onclick="document.getElementById('sidebar').classList.toggle('active')">
+        Support Us
+    </button>
+    
+    <div id="sidebar">
+        <div style="padding: 20px; text-align: center;">
+            <h3 style="margin-bottom: 20px;">Support the Developer</h3>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <div>
+                    <img src="images/780c001f91b6565d0c57ce6333bdf63.jpg" alt="Alipay" style="width: 120px; border-radius: 8px;">
+                    <p>Alipay</p>
+                </div>
+                <div>
+                    <img src="images/ba21a1ce97fc84145b2632f9f6f40f4.jpg" alt="WeChat Pay" style="width: 120px; border-radius: 8px;">
+                    <p>WeChat Pay</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <h1>Fu Name</h1>
         <p class="subtitle">Transform Your English Name into a Fun Chinese Name</p>
