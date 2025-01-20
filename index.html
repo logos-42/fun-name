@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fu Name - Funny Chinese Name Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Fu Name</h1>
+        <p class="subtitle">Transform Your English Name into a Fun Chinese Name</p>
+        <p class="festival-note">🏮 Spring Festival Special Edition 🏮</p>
+    </header>
+
+    <main>
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input type="text" id="englishName" placeholder="Enter your English name">
+                <button id="generateBtn">
+                    <i class="fas fa-magic"></i>
+                    Generate Names
+                </button>
+            </div>
+            <p class="input-tip">Get personalized Chinese names with cultural meanings!</p>
+        </div>
+
+        <div id="loadingIndicator" class="loading" style="display: none;">
+            <p>Creating your perfect Chinese name...</p>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;">
+            <p id="errorText"></p>
+            <button id="tryAgainBtn">Try Again</button>
+        </div>
+
+        <div id="results"></div>
+    </main>
+
+    <footer>
+        <p>🏮 Created with love for Spring Festival 2024 🏮</p>
+        <p class="footer-note">Each name comes with cultural meanings and explanations</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
